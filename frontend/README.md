@@ -32,13 +32,12 @@ In this project, I worked on amazon kind a shopppig cart page using react. For t
 - Node.js
 - Npm
 - React-redux and Thunk
-- React-reveal
-- React-modal
+- Hooks
+- React-router-dom
 - Nodemon
 - Express Js
-- Body-parser
-- Mongoose
-- Shortid
+- Axios
+
 
 
 
