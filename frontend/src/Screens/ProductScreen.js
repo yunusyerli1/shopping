@@ -14,7 +14,7 @@ const ProductScreen = (props) => {
         return () => {}}, []);
     
         const handledAddToCart = () => {
-            props.history.push();
+            props.history.push("/cart/" + props.match.params.id + "?qty=" + qty);
         }
 
     return (
