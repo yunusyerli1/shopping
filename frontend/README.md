@@ -37,6 +37,9 @@ In this project, I worked on amazon kind a shopppig cart page using react. For t
 - Nodemon
 - Express Js
 - Axios
+- dotenv
+- mongoose
+- body-parser
 
 
 
