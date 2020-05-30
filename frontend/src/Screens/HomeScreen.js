@@ -27,7 +27,7 @@ const HomeScreen = props => {
               
                     <li key={product._id}>
                         <div className="product">
-                            <Link to={'/product/'+product._id}>
+                            <Link to={'/product/'+ product._id}>
                                 <img className="product-image" src={product.image}  alt="product1" />
                             </Link>
                             <div className="product-name">

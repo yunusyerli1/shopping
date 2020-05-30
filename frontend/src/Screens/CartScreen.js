@@ -11,19 +11,23 @@ const CartScreen = (props) => {
     const productId = props.match.params.id;
     const qty = props.location.search ? Number(props.location.search.split("=")[1]) : 1;
     const dispatch = useDispatch();
-    const removeFromCartHandler = (productId) => {
-        dispatch(removeFromCart(productId));
-    }
+    
+    
     useEffect(()=>{
         if(productId){
             dispatch(addToCart(productId, qty));
         }
     },[]);
+
+    const removeFromCartHandler = (productId) => {
+        dispatch(removeFromCart(productId));
+    }
+    
     const checkOutHandler = () => {
         props.history.push("/signin?redirect=shipping");
     }
     return (
-        <div className="cart">
+        <div className="cart"> 
             <div className="cart-list">
                 <ul className="cart-list-container">
                     <li>
@@ -34,7 +38,7 @@ const CartScreen = (props) => {
                         cartItems.length === 0 ?
                         <div>Cart is empty</div> :
                         cartItems.map(item =>
-                            <li>
+                            <li key={item.product}>
                                 <div className="cart-image">
                                     <img src={item.image} alt="product" />
                                 </div>
