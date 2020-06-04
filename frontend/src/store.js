@@ -8,7 +8,7 @@ import { userSigninReducer, userRegisterReducer } from './redux/reducers/userRed
 const cartItems = Cookie.getJSON("cartItems") || [];
 const userInfo = Cookie.getJSON("causerInfortItems") || null;
 
-const initialState = {cart:{cartItems}, userSignin: {userInfo} };
+const initialState = {cart:{cartItems, shipping:{}, payment: {}}, userSignin: {userInfo} };
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const reducer = combineReducers({
